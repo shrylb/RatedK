@@ -1,0 +1,200 @@
+/* ===== CALICO CAT BIRTHDAY THEME ===== */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Fredoka:wght@400;600;700&family=Nunito:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  /* Calico Cat Colors */
+  --cream: #F5EDD8;
+  --warm-white: #FAF6EE;
+  --orange-patch: #D4854A;
+  --orange-light: #E8A96E;
+  --black-patch: #2C2018;
+  --brown-patch: #7A4E2D;
+  --burgundy: #7C1C2A;
+  --burgundy-light: #A52B3C;
+  --burgundy-pale: #F5E0E3;
+  --tan: #C9A87C;
+  --light-tan: #E8D5B7;
+  --dark-cream: #EAD9B8;
+  --muted-green: #8BAA7A;
+  --dusty-rose: #D4956A;
+  --soft-pink: #F0C8B8;
+
+  /* Typography */
+  --font-display: 'Fredoka', sans-serif;
+  --font-handwrite: 'Caveat', cursive;
+  --font-body: 'Nunito', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--cream);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ===== GLOBAL ANIMATIONS ===== */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes pawPrint {
+  0% { opacity: 0; transform: scale(0) rotate(-20deg); }
+  60% { opacity: 1; transform: scale(1.2) rotate(5deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  75% { transform: scale(0.95); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
+  50% { opacity: 0.6; transform: scale(1.2) rotate(180deg); }
+}
+
+@keyframes catTail {
+  0%, 100% { transform: rotate(-15deg) translateX(0); }
+  50% { transform: rotate(15deg) translateX(5px); }
+}
+
+@keyframes confetti {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes giftBounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-8px) rotate(-2deg); }
+  75% { transform: translateY(-4px) rotate(2deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes paw-stamp {
+  0% { transform: scale(0) rotate(-30deg); opacity: 0; }
+  50% { transform: scale(1.3) rotate(5deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* ===== SHARED BUTTON STYLES ===== */
+.btn-primary {
+  background: var(--burgundy);
+  color: var(--cream);
+  border: 2px solid var(--black-patch);
+  border-radius: 50px;
+  padding: 14px 32px;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 4px 4px 0 var(--black-patch);
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--black-patch);
+  background: var(--burgundy-light);
+}
+
+.btn-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--black-patch);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--black-patch);
+  border: 2px solid var(--black-patch);
+  border-radius: 50px;
+  padding: 14px 32px;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 4px 4px 0 var(--tan);
+}
+
+.btn-secondary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--tan);
+  background: var(--light-tan);
+}
+
+/* ===== CAT DOODLE DECORATIONS ===== */
+.cat-paw {
+  display: inline-block;
+  font-size: 1.4rem;
+}
+
+/* ===== FLOATING DECORATIONS ===== */
+.deco-dot {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* ===== PAGE TRANSITION ===== */
+.page-enter {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--tan);
+  border-radius: 4px;
+}

@@ -1,0 +1,227 @@
+.greeting-page {
+  min-height: 100vh;
+  background: var(--warm-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle texture */
+.greeting-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(212, 133, 74, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(124, 28, 42, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(201, 168, 124, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Floral decorations */
+.floral-left {
+  position: fixed;
+  bottom: 0;
+  left: -20px;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.8s ease 0.3s;
+  z-index: 1;
+}
+
+.floral-right {
+  position: fixed;
+  bottom: 0;
+  right: -20px;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.8s ease 0.5s;
+  z-index: 1;
+}
+
+.mounted .floral-left,
+.mounted .floral-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Main content */
+.greeting-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Cat */
+.cat-container {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.6s ease 0.2s;
+}
+
+.mounted .cat-container {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.greeting-cat {
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 8px 16px rgba(44, 32, 24, 0.15));
+}
+
+.greeting-cat.excited {
+  animation: float 1.5s ease-in-out infinite, wiggle 0.8s ease-in-out infinite;
+}
+
+/* Title */
+.greeting-title-wrap {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s ease 0.4s;
+}
+
+.mounted .greeting-title-wrap {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.greeting-title {
+  font-family: var(--font-handwrite);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 700;
+  color: var(--black-patch);
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.title-punctuation {
+  color: var(--burgundy);
+}
+
+/* Subtitle */
+.greeting-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--brown-patch);
+  opacity: 0;
+  transition: all 0.6s ease 0.6s;
+  letter-spacing: 0.5px;
+}
+
+.mounted .greeting-subtitle {
+  opacity: 1;
+}
+
+/* Buttons */
+.greeting-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.6s ease 0.8s;
+}
+
+.mounted .greeting-buttons {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-yes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--burgundy);
+  color: var(--cream);
+  border: 2.5px solid var(--black-patch);
+  border-radius: 50px;
+  padding: 14px 36px;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 5px 5px 0 var(--black-patch);
+  text-transform: uppercase;
+}
+
+.btn-yes:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 var(--black-patch);
+  background: var(--burgundy-light);
+}
+
+.btn-yes:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--black-patch);
+}
+
+.btn-paw {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.btn-no {
+  background: transparent;
+  color: var(--black-patch);
+  border: 2.5px solid var(--black-patch);
+  border-radius: 50px;
+  padding: 14px 36px;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 5px 5px 0 var(--tan);
+  text-transform: uppercase;
+}
+
+/* No button disappears on hover - handled inline but this adds smoothness */
+.btn-no:hover {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+/* Paw trail */
+.paw-trail {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.6s ease 1s;
+}
+
+.mounted .paw-trail {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .floral-left,
+  .floral-right {
+    display: none;
+  }
+
+  .greeting-title {
+    font-size: 3rem;
+  }
+
+  .greeting-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-yes,
+  .btn-no {
+    width: 200px;
+    justify-content: center;
+  }
+}
