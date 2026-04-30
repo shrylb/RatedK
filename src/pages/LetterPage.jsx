@@ -77,22 +77,22 @@ const LetterPage = ({ onBack }) => {
               But even more so, I'm reminded how far you have come. The past few months have given you challenges but through it all, the strength you've shown has been nothing short of inspiring. You are growing into such a remarkable person, and I am so proud of you.
             </p>
             <p>
-              I wish you laughter that comes easily, wins that match your effort, 
-              and kindness that circles back to you in the most unexpected ways. 
-              Keep trusting your quiet magic — even when days feel plain, your 
-              heart stays open, your mind stays steady, and your smile stays true.
+              May you have fun and laughter that comes easily, wins that match your effort, 
+              and kindness that circles back to you in the most unexpected ways. I wish you good health, restful sleep, on-time sweldo, and yes, good kalibangs too. May life treat you a little more gently, always.
             </p>
             <p>
-              Here's to gentle growth, sweet surprises, and memories worth keeping. 
-              Happy Birthday — may everything you give the world return to you 
-              brighter. Today, tomorrow, always. I love you more than you'll ever know. 🐾
+              And most of all, thank you for choosing me and for the kind of love that touches every bit of me. Thank you for being patient with me, for listening to my random thoughts and updates, and for staying even on the days that aren’t easy, even sauna when we were still classmates, boardmates, barkada and best friends pro max pa. Being with you feels like home. I don’t take what we have for granted, not even for a second. I’m so grateful it’s you, and I’ll keep choosing you, every day. I love you soooo much gwapa ko.
+              🐾
+            </p>
+            <p>
+              Above is the sweet and caring version. Would you like me to make another one that sounds more heartfelt and personal? HAHAHAHHAHAHA I love you gwaps, always.
             </p>
           </div>
 
           {/* Signature */}
           <div className="letter-signature">
             <span>With all my love</span>
-            <span className="signature-name">~ always yours </span>
+            <span className="signature-name">~ always yours, SherylB </span>
           </div>
 
           {/* Ribbon bow decoration */}

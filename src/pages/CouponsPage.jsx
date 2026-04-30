@@ -18,7 +18,7 @@ const COUPONS = [
     // emoji: '⭐',
     color: '#3A7CC2',
     darkColor: '#2A5C9A',
-    desc: 'Whatever your heart desires',
+    desc: 'Something I can grant for you',
     paw: '✦',
   },
   {
@@ -59,7 +59,7 @@ const Coupon = ({ coupon, index, flipped, onFlip }) => (
 
         {/* Side labels */}
         <div className="coupon-side-label left-label">COUPON</div>
-        <div className="coupon-side-label right-label">SINGLE USE</div>
+        <div className="coupon-side-label right-label">BIRTHDAY</div>
 
         <div className="coupon-front-body">
           <div className="coupon-emoji">{coupon.emoji}</div>
@@ -119,7 +119,7 @@ const CouponsPage = ({ onBack }) => {
           <DoodleCat size={60} className="coupons-cat" />
           <h1 className="coupons-title">Love coupons</h1>
           <p className="coupons-subtitle">
-            Use them freely... I never run out when it comes to you
+            Use them freely. No rules, no limits, just love. 🐾
           </p>
         </div>
 

@@ -1,6 +1,5 @@
 {
-  "name": "happy-birthday",
-  "homepage": "https://yourusername.github.io/ratedK" ,
+  "name": "ratedk",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -19,5 +18,5 @@
   "devDependencies": {
     "gh-pages": "^5.0.0"
   },
-  "homepage": "."
+  "homepage": "https://shrylb.github.io/ratedK"
 }
