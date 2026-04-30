@@ -21,7 +21,7 @@ function App() {
     <div>
       {showConfetti && <Confetti />}
       {page === 'greeting' && <GreetingPage onYes={() => navigate('gifts')} />}
-      {page === 'gifts' && <GiftBoxPage onBox1={() => navigate('letter')} onBox2={() => navigate('coupons')} />}
+      {page === 'gifts' && <GiftBoxPage onBox1={() => navigate('letter')} onBox2={() => navigate('coupons')} onBack={() => navigate('greeting')} />}
       {page === 'letter' && <LetterPage onBack={() => navigate('gifts')} />}
       {page === 'coupons' && <CouponsPage onBack={() => navigate('gifts')} />}
     </div>

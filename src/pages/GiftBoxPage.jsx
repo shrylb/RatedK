@@ -87,7 +87,7 @@ const GiftBox = ({ onClick, hovered, onHover, onLeave, label, color, ribbonColor
   )
 }
 
-const GiftBoxPage = ({ onBox1, onBox2 }) => {
+const GiftBoxPage = ({ onBox1, onBox2, onBack }) => {
   const [hovered, setHovered] = useState(null)
   const [mounted, setMounted] = useState(false)
 
@@ -110,8 +110,8 @@ const GiftBoxPage = ({ onBox1, onBox2 }) => {
 
       <div className="gift-content">
         <div className="gift-header">
-          <div className="gift-cat-emoji">🐱</div>
-          <h1 className="gift-title">GIFT FOR YOU!</h1>
+          {/* <div className="gift-cat-emoji">🐱</div> */}
+          <h1 className="gift-title">GIFTS FOR YOU!</h1>
           <p className="gift-subtitle">
             <span className="paw-icon">🐾</span>
             click a gift to open it
@@ -148,6 +148,11 @@ const GiftBoxPage = ({ onBox1, onBox2 }) => {
           ))}
         </div>
       </div>
+      
+        <button className="back-btn-coupons" onClick={onBack}>
+            ← Back to home
+        </button>
+              
     </div>
   )
 }

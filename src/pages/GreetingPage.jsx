@@ -97,9 +97,9 @@ const GreetingPage = ({ onYes }) => {
         <div className="greeting-title-wrap">
           <h1 className="greeting-title">
             {stage === 'initial' ? (
-              <>Hello there<span className="title-punctuation"> —!</span></>
+              <>Hello Gwaps<span className="title-punctuation">!</span></>
             ) : (
-              <>Happy <span style={{ color: 'var(--burgundy)' }}>Birthday</span>! 🎂</>
+              <>Happy <span style={{ color: 'var(--burgundy)' }}>Birthday</span> My Love! 🎂</>
             )}
           </h1>
         </div>
@@ -108,13 +108,13 @@ const GreetingPage = ({ onYes }) => {
         <p className="greeting-subtitle">
           {stage === 'initial'
             ? 'do you want to see your gift? 🐾'
-            : 'are you ready? 🎉'}
+            : 'are you ready?'}
         </p>
 
         {/* Buttons */}
         <div className="greeting-buttons">
           <button className="btn-yes" onClick={handleYes}>
-            <span>YES PLEASE</span>
+            <span>YES!</span>
             <span className="btn-paw">🐾</span>
           </button>
 

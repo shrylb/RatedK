@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { PawPrint, SleepingCat } from '../components/CatDoodles'
 import './LetterPage.css'
+import photo1 from '../assets/photos/photo1.jpg'
+import photo2 from '../assets/photos/photo2.jpg'
+import photo4 from '../assets/photos/photo4.jpg'
 
-// Polaroid photo placeholder
-const PolaroidPhoto = ({ emoji, caption, rotate, delay }) => (
+
+const PolaroidPhoto = ({ src, caption, rotate, delay }) => (
   <div className="polaroid" style={{ '--rotate': `${rotate}deg`, animationDelay: `${delay}s` }}>
     <div className="polaroid-photo">
-      <div className="polaroid-emoji">{emoji}</div>
+      {src
+        ? <img src={src} alt={caption} className="polaroid-img" />
+        : <div className="polaroid-placeholder">📷</div>
+      }
     </div>
     <p className="polaroid-caption">{caption}</p>
   </div>
@@ -48,9 +54,9 @@ const LetterPage = ({ onBack }) => {
       <div className="letter-content">
         {/* Left column: photos */}
         <div className="photos-column">
-          <PolaroidPhoto emoji="🎂" caption="birthday!" rotate={-8} delay={0.3} />
-          <PolaroidPhoto emoji="🥂" caption="cheers!" rotate={5} delay={0.5} />
-          <PolaroidPhoto emoji="🌸" caption="for you~" rotate={-4} delay={0.7} />
+          <PolaroidPhoto src={photo1} caption="birthday!" rotate={-8} delay={0.3} />
+          <PolaroidPhoto src={photo2} caption="cheers!"   rotate={5}  delay={0.5} />
+          <PolaroidPhoto src={photo4} caption="for you~"  rotate={-4} delay={0.7} />
 
           {/* Pocket decoration */}
           <div className="denim-pocket">
@@ -63,13 +69,12 @@ const LetterPage = ({ onBack }) => {
           {/* Star badge */}
           <div className="star-badge">⭐</div>
 
-          <h2 className="letter-salutation">Dear Love,</h2>
+          <h2 className="letter-salutation">Dear Gwaps,</h2>
 
           <div className="letter-body">
             <p>
-              As your special day begins, I'm reminded of how deeply you are cherished 
-              and how much light you bring into every day. May the months ahead hold 
-              calm mornings, brave hopes, and moments that taste like home.
+              As your special day begins, I'm once again reminded nga nag labor imong Nanay on Labor's Day. 
+              But even more so, I'm reminded how far you have come. The past few months have given you challenges but through it all, the strength you've shown has been nothing short of inspiring. You are growing into such a remarkable person, and I am so proud of you.
             </p>
             <p>
               I wish you laughter that comes easily, wins that match your effort, 
@@ -87,7 +92,7 @@ const LetterPage = ({ onBack }) => {
           {/* Signature */}
           <div className="letter-signature">
             <span>With all my love</span>
-            <span className="signature-name">~ always yours 🐱</span>
+            <span className="signature-name">~ always yours </span>
           </div>
 
           {/* Ribbon bow decoration */}

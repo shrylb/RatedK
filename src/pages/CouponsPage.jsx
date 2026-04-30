@@ -6,7 +6,7 @@ const COUPONS = [
   {
     id: 1,
     title: 'Unlimited Hugs',
-    emoji: '🤗',
+    // emoji: '🤗',
     color: '#4A6FA5',
     darkColor: '#355080',
     desc: 'Redeemable anytime, anywhere',
@@ -15,7 +15,7 @@ const COUPONS = [
   {
     id: 2,
     title: 'Your Wish',
-    emoji: '⭐',
+    // emoji: '⭐',
     color: '#3A7CC2',
     darkColor: '#2A5C9A',
     desc: 'Whatever your heart desires',
@@ -23,17 +23,17 @@ const COUPONS = [
   },
   {
     id: 3,
-    title: 'Date Night',
-    emoji: '🌙',
+    title: 'Ding Qua Qua Buffet',
+    // emoji: '🌙',
     color: '#5460A8',
     darkColor: '#3D4880',
     desc: 'Pick the perfect evening',
-    paw: '🌸',
+    paw: '🍽',
   },
   {
     id: 4,
     title: 'Unlimited Kisses',
-    emoji: '💋',
+    // emoji: '💋',
     color: '#3B8CC4',
     darkColor: '#2A6A9A',
     desc: 'Never expires, never runs out',
@@ -74,7 +74,7 @@ const Coupon = ({ coupon, index, flipped, onFlip }) => (
         <div className="coupon-notch right" />
         <div className="coupon-perf" />
         <div className="coupon-back-body">
-          <div style={{ fontSize: '2rem' }}>🐱</div>
+          {/* <div style={{ fontSize: '2rem' }}>🐱</div> */}
           <p className="coupon-desc">{coupon.desc}</p>
           <p className="coupon-infinite">∞</p>
           <p className="coupon-fine-print">valid forever • no expiry</p>
